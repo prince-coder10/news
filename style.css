@@ -1,0 +1,325 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(./assets/fonts/Inter-VariableFont_slnt\wght.ttf);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(./assets/fonts/static/Inter-Regular.ttf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(./assets/fonts/static/Inter-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(./assets/fonts/static/Inter-ExtraBold.ttf);
+  font-weight: bolder;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Inter";
+  padding: 0;
+  margin: 20px;
+  margin-left: 120px;
+}
+
+.menu-button {
+  display: none;
+}
+
+#cancel {
+  display: none;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header > ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  margin-right: 120px;
+  padding-top: 23px;
+}
+
+header > ul > a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+header > ul > a :hover {
+  color: hsl(0, 85%, 63%);
+}
+
+header > img {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  margin-left: 120px;
+}
+
+.main {
+  display: flex;
+  gap: 30px;
+}
+
+.web3 {
+  word-wrap: normal;
+}
+
+.web3 > img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+
+.web3 h1 {
+  font-weight: bolder;
+  font-size: 50px;
+  color: hsl(240, 100%, 5%);
+}
+
+.text {
+  font-weight: lighter;
+  line-height: 24px;
+}
+
+.content {
+  display: flex;
+  gap: 150px;
+}
+
+.content button {
+  padding: 10px;
+  width: 40%;
+  border-radius: none;
+  margin-top: 50px;
+  background: hsl(5, 85%, 63%);
+  outline: none;
+  border: none;
+  color: white;
+}
+
+.content button:hover {
+  background: hsl(240, 100%, 5%);
+  color: white;
+}
+
+.new {
+  background: hsl(240, 100%, 5%);
+  color: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.new a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.new a:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+.new h1 {
+  color: hsl(35, 77%, 62%);
+  font-size: 32px;
+}
+
+.below {
+  display: flex;
+  flex-direction: column;
+}
+
+.below .image {
+  scale: 0.5;
+  object-fit: cover;
+}
+
+.block1,
+.block2,
+.block3 {
+  display: flex;
+}
+
+.remark {
+  margin-top: 60px;
+  line-height: 20px;
+  font-weight: lighter;
+}
+
+.remark > h2 {
+  color: hsl(33, 27%, 83%);
+}
+
+.remark h4 {
+  color: hsl(240, 100%, 5%);
+  font-weight: bold;
+}
+
+.remark h4:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+@media only screen and (min-width: 975px) {
+  header > ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    margin-right: 120px;
+    padding-top: 23px;
+  }
+}
+
+@media only screen and (max-width: 974px) {
+  .menu-button {
+    all: unset;
+    display: inline-block;
+    transform: translateX(350%);
+    z-index: 2;
+  }
+
+  #cancel {
+    all: unset;
+    margin-top: 30px;
+    transform: translateX(650%);
+  }
+
+  .logo {
+    transform: translateX(-150%);
+  }
+
+  header > ul {
+    z-index: 5;
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    position: fixed;
+    right: 0;
+    top: 0;
+    line-height: 0.1;
+    height: 100%;
+    width: 70%;
+    margin-right: 0;
+    padding-top: 0;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  header > ul > a > li {
+    word-spacing: 0.1pc;
+    white-space: unset;
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+  }
+
+  header > ul > a {
+    text-align: left;
+    margin-top: 90px;
+    display: block;
+    line-height: 0.1pc;
+    text-decoration: none;
+    color: black;
+  }
+
+  body {
+    margin-left: 20px;
+  }
+  .main {
+    display: block;
+  }
+
+  .content {
+    display: block;
+  }
+
+  .below {
+    margin-left: -180px;
+  }
+
+  .below .image {
+    scale: 0.6;
+  }
+
+  .block1,
+  .block2,
+  .block3 {
+    display: block;
+  }
+
+  .below .remark {
+    margin-top: -180px;
+    float: right;
+  }
+
+  .content button {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .below {
+    margin-left: -175px;
+  }
+}
+
+@media only screen and (max-width: 894px) {
+  .below {
+    margin-left: -20%;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .below {
+    margin-left: -20%;
+  }
+
+  .remark {
+    margin-right: -90px;
+  }
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
